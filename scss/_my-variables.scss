@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+// Color Palette
+//
+
+$WP-Primary:            #666666; // Gray
+$WP-Highlight:          #ffe700; // Solar Yellow
+
+// Just because I'm lazy…
+$white:                 #ffffff;
+$black:                 #000000;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+//
+// Force CSS font-weight and font-style, otherwise IE screws up
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+
+$font-folder: '../fonts';
+
+@mixin font-face ( $family, $filename, $weight, $style ) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$font-folder}/#{$filename}.eot');
+		src: url('#{$font-folder}/#{$filename}.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-folder}/#{$filename}.woff2') format('woff2'),
+		url('#{$font-folder}/#{$filename}.woff') format('woff'),
+		url('#{$font-folder}/#{$filename}.ttf') format('truetype'),
+		url('#{$font-folder}/#{$filename}.svg') format('svg');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+// Thought: Update mixin to generate n/n, n/i, b/n, b/i with a single call:
+// @mixin font-face ( $family, $filename, $filename-bold )
+
+@include font-face('SourceSansPro', 'SourceSansPro-Regular', normal, normal);
+@include font-face('SourceSansPro', 'SourceSansPro-Italic', normal, italic);
+@include font-face('SourceSansPro', 'SourceSansPro-Bold', bold, normal);
+@include font-face('SourceSansPro', 'SourceSansPro-BoldItalic', bold, italic);
+
+@include font-face('SourceSansPro-Light', 'SourceSansPro-Light', normal, normal);
+@include font-face('SourceSansPro-Light', 'SourceSansPro-LightItalic', normal, italic);
+@include font-face('SourceSansPro-Light', 'SourceSansPro-SemiBold', bold, normal);
+@include font-face('SourceSansPro-Light', 'SourceSansPro-SemiBoldItalic', bold, italic);
+
+@include font-face('SourceSerifPro', 'SourceSerifPro-Regular', normal, normal);
+@include font-face('SourceSerifPro', 'SourceSerifPro-Bold', bold, normal);
+
+$font-family-sans-serif:  SourceSansPro-Light, Calibri, Arial, Helvetica, sans-serif;
+$font-family-serif:       SourceSerifPro, Georgia, 'Times New Roman', Times, serif;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          16px;
+$font-size-base-md:       18px;
+$font-size-base-lg:       21px;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #f8f8f8;
+//** Global text color on `<body>`.
+$text-color:            $WP-Primary;
+
+

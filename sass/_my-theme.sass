@@ -1,0 +1,173 @@
+@charset "UTF-8"
+
+//
+// ## Site-Specific Theme for Bootstrap
+// --------------------------------------------------
+
+//
+// ## DEBUG ONLY
+
+//div, ul, li { outline: 1px solid rgba(0,0,0,0.1); }
+
+//
+// ## Tags
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-family-serif
+	font-weight: bold
+
+	&:first-child
+		margin-top: 0
+
+hr
+	height: 0
+	border-top-color: $WP-Primary
+	margin: 2em 0
+
+//
+// ## Utility Classes
+
+.hidden
+	display: none
+
+//
+// ## Typography
+
+body
+	font-family: $font-family-base
+	font-size: $font-size-base
+	color: $WP-Primary
+
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		font-size: $font-size-base-md
+
+	@media (min-width: $screen-lg-min)
+		font-size: $font-size-base-lg
+
+//
+// ## Overall Site Scaffolding
+
+html, body
+	height: 100%
+
+// height of footer for "sticky footer" hack
+
+$footer-size: 30px
+
+#page
+	min-height: 100%
+	margin-bottom: -$footer-size
+
+	&:after
+		content: ""
+		display: block
+		height: $footer-size
+
+//
+// ## Main Navigation
+
+nav.navbar
+	background-color: $WP-Primary
+	border: none
+
+	.navbar-brand
+		background-color: $WP-Highlight
+		color: $WP-Primary
+		font-size: 120%
+		font-weight: bold
+		line-height: $line-height-computed
+		text-shadow: white 1px 1px
+		.glyphicon
+			line-h: 0
+			font-size: 80%
+
+	.navbar-nav
+		font-family: SourceSansPro, sans-serif
+		color: $WP-Highlight
+
+		li.active a
+			font-weight: bold
+
+	.navbar-nav a
+		color: $WP-Highlight
+		text-shadow: black 1px 1px
+
+		&:focus, &:hover
+			//color: $black
+			background-color: lighten($WP-Primary, 25%)
+
+	.navbar-toggle .icon-bar
+		background-color: $WP-Primary
+
+.navbar-collapse.collapse.in,
+.navbar-collapse.collapsing
+	background-color: $white
+	color: $WP-Primary
+	text-shadow: none
+
+#main-content
+	padding: 100px 0 30px
+
+	// clearance for fixed top nav
+	a
+		font-family: SourceSansPro
+
+	.deck
+		font-family: SourceSansPro
+
+//
+// Footer
+
+#footer
+	display: block
+	height: $footer-size
+	text-align: right
+	font-size: 70%
+	padding-top: 0.4em
+	background-color: $WP-Primary
+	color: lighten($WP-Primary, 50%)
+
+//
+// ## Specific Features
+
+// Home Page Jumbotron
+
+#welcome
+	margin-top: 2em
+	color: $white
+	text-shadow: $black 0 0 5px
+	background: $WP-Primary url("/img/welcome.jpg") center center
+	background-size: 100% auto
+
+	h1
+		font-size: 300%
+
+// Portfolio
+
+#portfolio
+	.portfolio-item
+		background-color: $white
+		margin: 1em 0
+		padding: 1em 0.25em
+		border-radius: 0.5em
+		box-shadow: inset 5px 5px 5px lighten($WP-Primary, 50%)
+		border: 1px solid lighten($WP-Primary, 50%)
+
+		img
+			width: 100%
+			border: 1px solid lighten($WP-Primary, 33%)
+			border-radius: 0.5em
+
+		.thumb
+			text-align: center
+			font-size: 70%
+
+			img
+				margin-bottom: 0.75em
+
+iframe
+	width: 1024px
+	height: 660px
+
+//
+// ## Third Party

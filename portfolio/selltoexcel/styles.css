@@ -1,0 +1,433 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('reset.css');
+
+/* Omnes_ATT_Light */
+@font-face {
+	font-family: 'Omnes_ATT_Light';
+	src: url('fonts/omnesatt-light.eot');
+	src: url('fonts/omnesatt-light.eot?#iefix') format('embedded-opentype'),
+	url('fonts/omnesatt-light.woff') format('woff'),
+	url('fonts/omnesatt-light.ttf') format('truetype'),
+	url('fonts/omnesatt-light.svg#Omnes_ATT_Light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Omnes_ATT_Regular */
+@font-face {
+	font-family: 'Omnes_ATT_Regular';
+	src: url('fonts/omnesatt-regular.eot');
+	src: url('fonts/omnesatt-regular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/omnesatt-regular.woff') format('woff'),
+	url('fonts/omnesatt-regular.ttf') format('truetype'),
+	url('fonts/omnesatt-regular.svg#Omnes_ATT_Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Omnes_ATT_Regular';
+	src: url('fonts/omnesatt-regularitalic.eot');
+	src: url('fonts/omnesatt-regularitalic.eot?#iefix') format('embedded-opentype'),
+	url('fonts/omnesatt-regularitalic.woff') format('woff'),
+	url('fonts/omnesatt-regularitalic.ttf') format('truetype'),
+	url('fonts/omnesatt-regularitalic.svg#Omnes_ATT_Regularitalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* Omnes_ATT_RegularItalic */
+@font-face {
+	font-family: 'Omnes_ATT_RegularItalic';
+	src: url('fonts/omnesatt-regularitalic.eot');
+	src: url('fonts/omnesatt-regularitalic.eot?#iefix') format('embedded-opentype'),
+	url('fonts/omnesatt-regularitalic.woff') format('woff'),
+	url('fonts/omnesatt-regularitalic.ttf') format('truetype'),
+	url('fonts/omnesatt-regularitalic.svg#Omnes_ATT_Regularitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Omnes_ATT_Italic */
+@font-face {
+	font-family: 'Omnes_ATT_Italic';
+	src: url('fonts/omnesatt-regularitalic.eot');
+	src: url('fonts/omnesatt-regularitalic.eot?#iefix') format('embedded-opentype'),
+	url('fonts/omnesatt-regularitalic.woff') format('woff'),
+	url('fonts/omnesatt-regularitalic.ttf') format('truetype'),
+	url('fonts/omnesatt-regularitalic.svg#Omnes_ATT_RegularItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Omnes_ATT_Medium */
+@font-face {
+	font-family: 'Omnes_ATT_Medium';
+	src: url('fonts/omnesatt-medium.eot');
+	src: url('fonts/omnesatt-medium.eot?#iefix') format('embedded-opentype'),
+	url('fonts/omnesatt-medium.woff') format('woff'),
+	url('fonts/omnesatt-medium.ttf') format('truetype'),
+	url('fonts/omnesatt-medium.svg#Omnes_ATTMedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Stag_ATT_BoldItalic */
+@font-face {
+	font-family: 'Stag_ATT_BoldItalic';
+	src: url('fonts/stagatt-bolditalic.eot');
+	src: url('fonts/stagatt-bolditalic.eot?#iefix') format('embedded-opentype'),
+	url('fonts/stagatt-bolditalic.woff') format('woff'),
+	url('fonts/stagatt-bolditalic.ttf') format('truetype'),
+	url('fonts/stagatt-bolditalic.svg#StagATTBoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Clearview_ATT_Bold */
+@font-face {
+	font-family: 'Clearview_ATT_Bold';
+	src: url('fonts/clearviewatt-bold.eot');
+	src: url('fonts/clearviewatt-bold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/clearviewatt-bold.woff') format('woff'),
+	url('fonts/clearviewatt-bold.ttf') format('truetype'),
+	url('fonts/clearviewatt-bold.svg#ClearviewATTBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html {
+	-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+
+body {
+	background-color: #ffffff;
+}
+
+sup {
+	line-height: 0 !important; /* keep the leading consistent in a paragraph */
+	font-size: 50%;
+	vertical-align: super;
+	position: relative;
+	/*top: 0.2em;*/
+}
+
+
+
+#stage {
+	margin: 0 auto;
+	width: 1024px;
+	height: 660px;
+	border: 1px solid #808080;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -512px;
+	margin-top: -330px;
+	overflow: hidden;
+}
+
+.frame {
+	position: absolute;
+	display: none;
+	width: 1024px;
+	z-index: -2;
+}
+
+#att_logo {
+	position: absolute;
+	display: none;
+	top: 50%; left: 50%;
+	margin: -100px 0 0 -100px;
+}
+
+#header {
+	width: 1024px;
+	height: 100px;
+	z-index: 1024;
+	background-color: #ffffff;
+}
+
+#splash {
+	display: none;
+	position: absolute;
+	top: 400px;	left: 80px;
+	padding: 0 20px;
+	z-index: 32768;
+	color: #ef6f00;
+	font-family: 'Stag_ATT_BoldItalic';
+	font-size: 155px;
+	white-space: nowrap;
+}
+
+#title {
+	display: inline-block;
+	position: absolute;
+	top: -120px;
+	font-family: 'Omnes_ATT_Light';
+	font-size: 40px;
+	color: #666666;
+	margin: 20px 0 0 36px;
+}
+
+#title span {
+	font-family: 'Omnes_ATT_Regular';
+	color: #ef6f00;
+}
+
+#info {
+	display: inline-block;
+	float: right;
+	position: relative;
+	left: 300px;
+	margin: 40px 40px 0 0;
+	font: 21px 'Omnes_ATT_Regular';
+}
+
+#info a {
+	color: #067ab4;
+	text-decoration: none;
+}
+
+#info span {
+	font-weight: bold;
+}
+
+blockquote {
+	margin: 100px 160px 0;
+	font: 54px 'Omnes_ATT_RegularItalic';
+	color: #4ca90c;
+}
+
+blockquote .attr {
+	display: block;
+	text-align: right;
+	color: #000000;
+	font: 29px 'Omnes_ATT_Light';
+}
+
+#frame04 p {
+	margin: 150px auto 0;
+	width: 75px;
+	font: 7px 'Omnes_ATT_RegularItalic';
+	color: #4ca90c;
+	white-space: nowrap;
+}
+
+#frame05 {
+	z-index: -1024;
+}
+
+#frame05 span {
+	/*display: none;*/
+	position: absolute;
+	white-space: nowrap;
+}
+
+#frame05 .green {
+	position: absolute;
+	width: 1024px;
+	height: 2px;
+	left: 1024px;
+	top: 175px;
+	margin-top: -1px;
+	background: #4ca90c;
+	background:    -moz-linear-gradient(left, #4ca90c 0%, #c4d82d 100%);
+	background:        -webkit-gradient(left top, right top, color-stop(0%, #4ca90c), color-stop(100%, #c4d82d));
+	background: -webkit-linear-gradient(left, #4ca90c 0%, #c4d82d 100%);
+	background:      -o-linear-gradient(left, #4ca90c 0%, #c4d82d 100%);
+	background:     -ms-linear-gradient(left, #4ca90c 0%, #c4d82d 100%);
+	background:         linear-gradient(to right, #4ca90c 0%, #c4d82d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ca90c', endColorstr='#c4d82d', GradientType=1 );
+}
+
+#frame05 #text05a {
+	display: none;
+	top: 115px; left: -475px;
+	color: #ffffff;
+	font: 76px 'Omnes_ATT_Regular';
+	letter-spacing: -0.05em;
+	-webkit-text-shadow: 0px 0px 5px #4ca90c;
+	   -moz-text-shadow: 0px 0px 5px #4ca90c;
+	        text-shadow: 0px 0px 5px #4ca90c;
+}
+
+#frame05 #text05b {
+	top: 0px; left: 1100px;
+	color: #ffffff;
+	font: 138px 'Omnes_ATT_Medium';
+	line-height: 108px;
+	letter-spacing: -0.07em;
+	-webkit-text-shadow: 0px 0px 5px #4ca90c;
+	   -moz-text-shadow: 0px 0px 5px #4ca90c;
+	        text-shadow: 0px 0px 5px #4ca90c;
+}
+
+#frame05 #text05c {
+	top: 355px; left: 1100px;
+	color: #4ca90c;
+	font: 37px 'Omnes_ATT_Medium';
+	letter-spacing: -0.03em;
+}
+
+#frame05 #text05d {
+	top: 440px; left: 1100px;
+	color: #81017e;
+	font: 55px 'Clearview_ATT_Bold';
+	letter-spacing: -0.05em;
+}
+
+#frame06,
+#frame07,
+#frame08,
+#frame10,
+#frame12,
+#frame15,
+#frame16,
+#frame17,
+#frame18,
+#frame20 {
+	left: 1024px;
+	height: 660px;
+}
+
+#frame09,
+#frame14 {
+	top: 660px;
+}
+
+#frame11 {
+	text-align: center;
+	top: -660px;
+}
+
+#frame11 img {
+	margin: 64px auto 32px;
+}
+
+#frame11 p {
+	color: #ef6f00;
+	font: 33px 'Omnes_ATT_Regular';
+	display: none;
+}
+
+#frame13 p {
+	color: #ef6f00;
+	font: 33px 'Omnes_ATT_Regular';
+	margin: 120px 170px 0;
+}
+
+#backdrop_green {
+	display: none;
+	position: absolute;
+	width: 1024px;
+	height: 660px;
+	z-index: -16;
+	background: #4ca90c;
+	background:    -moz-linear-gradient(top, #c4d82d 0%, #4ca90c 100%);
+	background:        -webkit-gradient(left top, left bottom, color-stop(0%, #c4d82d), color-stop(100%, #4ca90c));
+	background: -webkit-linear-gradient(top, #c4d82d 0%, #4ca90c 100%);
+	background:      -o-linear-gradient(top, #c4d82d 0%, #4ca90c 100%);
+	background:     -ms-linear-gradient(top, #c4d82d 0%, #4ca90c 100%);
+	background:         linear-gradient(to bottom, #c4d82d 0%, #4ca90c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4d82d', endColorstr='#4ca90c', GradientType=0 );
+}
+
+#frame18 p {
+	font: 80px 'Omnes_ATT_Regular';
+	line-height: 76px;
+	color: #ffffff;
+	margin: 160px 130px 0;
+}
+
+#frame18 #stateofmind {
+	font-family: 'Clearview_ATT_Bold';
+}
+
+#frame18 #sights {
+	display: block;
+	color: #ffff00;
+}
+
+#frame19,
+#frame22 {
+	top: 0;
+	height: 660px;
+}
+
+#frame19 p,
+#frame22 p {
+	position: absolute;
+	display: none;
+	font: 27px 'Omnes_ATT_Regular';
+	color: #000000;
+}
+
+#frame19 img,
+#frame22 img {
+	position: absolute;
+	display: none;
+}
+
+#sights01 { top:660px; left:342px; z-index:32; } /* move to top:160px */
+#sights02 { top:180px; left:362px; }
+#sights03 { top:200px; left:382px; }
+
+#sights04 { top:660px; left:324px; z-index:32; } /* move to top:200px */
+#sights05 { top:208px; left:362px; }
+#sights06 { top:208px; left:342px; }
+#sights07 { top:220px; left:362px; }
+
+#frame19 p { top:320px; left:400px; }
+#frame22 p { top:320px; left:330px; }
+
+
+#frame20 p {
+	font: 80px 'Omnes_ATT_Regular';
+	line-height: 76px;
+	color: #ffffff;
+	margin: 200px 140px 0;
+}
+
+#frame20 span {
+	font-family: 'Clearview_ATT_Bold';
+}
+
+#frame24 {
+	height: 660px;
+	background: #000000 url('i/finish.jpg') 0px 0px no-repeat; /* 0px 660px no-repeat; */
+	color: #ffffff;
+}
+
+#frame24 #stinger {
+	display: none;
+	position: absolute;
+	top: 160px;
+	width: 1024px;
+	color: #c4d82d;
+	font: 80px 'Omnes_ATT_Italic';
+	text-align: center;
+}
+
+#frame24 #calltoaction {
+	display: none;
+	position: absolute;
+	top: 32px;
+	left: 1024px;
+	width: 750px;
+	font: 40px 'Omnes_ATT_Regular';
+}
+
+#calltoaction span {
+	display: block;
+	color: #c4d82d;
+	font-size: 54px;
+	font-style: italic;
+}
+#calltoaction .date {
+	display: block;
+	margin-top: 32px;
+	font-style: italic;
+}
